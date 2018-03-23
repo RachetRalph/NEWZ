@@ -24,18 +24,21 @@
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">Mongo Scraper</a>
+                <a class="navbar-brand" href="/">NEWZ</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>
+                    {{!-- <li>
                         <a href="/">Home</a>
+                    </li> --}}
+                    <li>
+                        {{!-- <a href="/saved">SAVED</a> --}}
+                        <a href="/saved" class="btn">
+                            <span class="glyphicon glyphicon-floppy-disk"></span> SAVED NEWZ
+                        </a>
                     </li>
                     <li>
-                        <a href="/saved">Saved Articles</a>
-                    </li>
-                    <li>
-                        <button type="button" class="btn btn-primary" id="scrape">Scrape Articles</button>
+                        <button type="button" class="btn btn-primary" id="scrape">GET NEWZ</button>
                     </li>
                 </ul>
             </div>
