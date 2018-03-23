@@ -1,3 +1,5 @@
+import { Mongoose } from 'mongoose';
+
 // Sever setup & route setup goes here //
 const express = require('express');
 const mongojs = require("mongojs")
@@ -14,11 +16,13 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 // Database configuration
-const databaseUrl = "NEWZscraper";
-const collections = ["NEWScrapeData"];
+// Database configuration with mongoose
+mongoose.connect("mongodb://rbern412:VdMUPx7KLgJZApj@ds115569.mlab.com:15569/heroku_rwlqgbv0");
+
+//mongoose.connect("mongodb://localhost/mongoscraper");
 
 // Hook mongojs configuration to the db variable
-var db = mongojs(databaseUrl, collections);
+var db = mongoose.connection;
 db.on("error", function (error) {
     console.log("Database Error:", error);
 });
